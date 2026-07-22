@@ -19,6 +19,7 @@ A modern web application allowing developers to create custom API endpoints with
 ## 📁 Key File Structure
 - `README.md`: Clear step-by-step usage guide and setup instructions with hidden dummy env placeholders.
 - `.env.example`: Safe environment variables template.
+- `package.json`: Build script updated to `"build": "prisma generate && next build"` for Vercel deployment.
 - `prisma/schema.prisma`: User, Account, Session, VerificationToken, and ApiEndpoint models.
 - `prisma.config.ts`: Prisma v7 configuration file.
 - `src/lib/prisma.ts`: Prisma Client singleton instance with `PrismaPg` adapter & connection timeout options.
@@ -47,6 +48,6 @@ A modern web application allowing developers to create custom API endpoints with
 - [x] **Phase 2 (Authentication & Auth UI)**: Credentials & Google OAuth providers + Registration API + Clean Glassmorphic Auth UI.
 - [x] **Phase 3 (Dynamic API Engine)**: Public dynamic route `/api/mock/[slug]` + Endpoints CRUD APIs (`/api/endpoints`).
 - [x] **Phase 4 (Dashboard UI)**: Glassmorphic dashboard, Endpoint creation form, status/delay sliders, live test modal, stats header.
-- [x] **Phase 5 (Enhancements & Vercel Fixes)**: Fixed TypeScript strict error in `src/app/api/mock/[slug]/route.ts`, verified `npm run build` locally with zero errors, ready for Vercel auto-deploy!
+- [x] **Phase 5 (Vercel Build Fix)**: Added `prisma generate` to `package.json` build command (`"prisma generate && next build"`), eliminating Vercel `@prisma/client` missing member type error!
 
-## 🎉 Status: ALL PHASES, TYPESCRIPT FIXES & BUILD 100% COMPLETE & VERIFIED!
+## 🎉 Status: ALL PHASES & VERCEL BUILD FIXES 100% COMPLETE & VERIFIED!
