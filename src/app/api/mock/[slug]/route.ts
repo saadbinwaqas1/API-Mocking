@@ -44,7 +44,7 @@ async function handleMockRequest(
         where: { id: endpoint.id },
         data: { callCount: { increment: 1 } },
       })
-      .catch((err) => console.error("Error updating call count:", err));
+      .catch((err: unknown) => console.error("Error updating call count:", err));
 
     // 5. Parse JSON response body safely
     let responseJson = {};
